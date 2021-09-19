@@ -1,9 +1,7 @@
 import java.sql.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-public class HeadClass {
+
+public class Solution {
     private static void createTable(DBManager manager){
         String query = "CREATE TABLE if not exists my_table (name VARCHAR, birth DATE, sex CHAR);";
         Statement statement = manager.getStatement();
@@ -83,8 +81,9 @@ public class HeadClass {
 
 
 
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+    public static void main(String[] args) throws SQLException {
         DBManager manager = new DBManager();
+
 
         switch(args[0]){
             case  "1" :

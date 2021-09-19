@@ -1,6 +1,6 @@
 import java.util.Date;
 import java.util.Locale;
-import java.util.Random;
+
 
 public class RandomPersonFactory {
 
@@ -22,8 +22,8 @@ public class RandomPersonFactory {
     private String getRandomName(){
         String chars = "abcdefghijklmnopqrstuvwxyz";
         StringBuilder name = new StringBuilder();
-        int charNumber = (int)(Math.random()*25);
         for (int i = 0; i < 3; i++) {
+            int charNumber = (int)(Math.random()*25);
             name.append(chars.toUpperCase(Locale.ROOT).charAt(charNumber));
             for (int j = 0; j < 5; j++) {
                 name.append(chars.charAt(charNumber));
